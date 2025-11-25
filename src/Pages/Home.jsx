@@ -6,8 +6,15 @@ const Home = () => {
     return (
         <div>
 
-            <Header />
-            <Hero />
+
+            <div className="fixed top-0 left-5 h-screen w-[1.3px] bg-[#008187] z-50"></div>
+
+            {/* Правая линия */}
+            <div className="fixed top-0 right-5 h-screen w-[1.3px] bg-[#008187] z-50"></div>
+            <div className='pt-[190px] max-w-full w-[90%] mx-auto'>
+                <Header />
+                <Hero />
+            </div>
 
         </div>
     )
