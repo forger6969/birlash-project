@@ -1,54 +1,41 @@
 import React from 'react'
-import logo from '../assets/company_logo.png'
-import logo1 from '../assets/svg_logo_company.svg'
-import { motion } from 'framer-motion'
+import { motion } from "framer-motion";
+import logo1 from '../assets/svg_logo_company.svg';
 
 const Header = () => {
     return (
-        <div>
-            <header className='fixed top-5 left-1/2 -translate-x-1/2 w-[90%] bg-gradient-to-l from-[#004D57] to-[#017686] rounded-[15px]'>
-                <div className="header-wrapper flex items-center justify-between px-[20px]">
-                    <img className='w-[150px]' src={logo1} alt="" />
+        <motion.header
+            initial={{ y: -80, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className='fixed top-5 left-1/2 -translate-x-1/2 w-[90%] bg-gradient-to-l from-[#004D57] to-[#017686] rounded-[15px] shadow-lg'
+        >
+            <div className="header-wrapper flex items-center justify-between px-[20px] py-[10px]">
+                <motion.img
+                    src={logo1}
+                    className="w-[120px] cursor-pointer"
+                    whileHover={{
+                        scale: [1, 1.2, 1],     // эффект сердцебиения
+                    }}
+                    transition={{
+                        duration: 0.5,
+                        ease: "easeInOut",
+                        repeat: 1               // два удара можно сделать repeat: 2
+                    }}
+                />
 
-                    <nav>
-                        <ul className='flex items-center gap-[35px]'>
-                            <motion.li
-                                className="relative w-[100px] h-[30px] overflow-hidden cursor-pointer"
-                                initial="initial"
-                                whileHover="hover"
-                            >
-                                {/* Исчезающий текст */}
-                                <motion.div
-                                    className="absolute top-0 left-0 w-full h-full flex items-center justify-center text-white"
-                                    variants={{
-                                        initial: { y: 0 },
-                                        hover: { y: "-100%" }
-                                    }}
-                                    transition={{ duration: 0.35, ease: "easeInOut" }}
-                                >
-                                    BIRLASH
-                                </motion.div>
+                <nav>
+                    <ul className='flex items-center gap-[35px] text-white'>
+                        <li>BIRLASH</li>
+                        <li>ABOUT</li>
+                        <li>CONTACT</li>
+                    </ul>
+                </nav>
 
-                                {/* Появляющийся текст снизу */}
-                                <motion.div
-                                    className="absolute top-0 left-0 w-full h-full flex items-center justify-center text-white"
-                                    variants={{
-                                        initial: { y: "100%" },
-                                        hover: { y: 0 }
-                                    }}
-                                    transition={{ duration: 0.35, ease: "easeInOut" }}
-                                >
-                                    BIRLASH
-                                </motion.div>
-                            </motion.li>
-                        </ul>
-                    </nav>
+                <button className='text-white'>Example</button>
+            </div>
+        </motion.header>
+    );
+};
 
-                    <button>Example</button>
-                </div>
-            </header>
-        </div>
-    )
-}
-
-export default Header
+export default Header;
