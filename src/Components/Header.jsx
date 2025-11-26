@@ -23,7 +23,7 @@ const Header = () => {
             initial={{ y: -140, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className='fixed top-0 left-1/2 -translate-x-1/2 w-[90%] bg-gradient-to-l from-[#004D57] to-[#017686] rounded-b-[15px] shadow-lg'
+            className='fixed top-0 left-1/2 -translate-x-1/2 w-[90%] bg-gradient-to-l from-[#004D57] to-[#017686] rounded-b-[15px] shadow-lg z-[999]'
         >
             <div className="header-wrapper flex items-center justify-between px-[20px] py-[10px]">
                 <motion.img
