@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Home from './Pages/Home'
 import Loading from './Pages/Loading'
+import { Foters } from './Components/Foters'
 
 const App = () => {
   const [loader, setLoader] = useState(true)
@@ -16,6 +17,7 @@ const App = () => {
       {loader ? <Loading /> :
         <Home />
       }
+
 
     </div>
   )
