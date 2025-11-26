@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from '../Components/Header'
 import Hero from '../Components/Hero'
+import Slogan from '../Components/Slogan'
 
 const Home = () => {
     return (
@@ -14,6 +15,7 @@ const Home = () => {
             <div className='pt-[190px] max-w-full w-[90%] mx-auto'>
                 <Header />
                 <Hero />
+                <Slogan/>
             </div>
 
         </div>

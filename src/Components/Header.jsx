@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { motion } from "framer-motion";
-import logo1 from '../assets/svg_logo_company.svg';
+import { motion } from "framer-motion"
+import logo1 from '../assets/svg_logo_company.svg'
 
 const Header = () => {
 
