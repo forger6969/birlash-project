@@ -6,7 +6,7 @@ export const Foters = () => {
     return (
         <>
 
-            <div className='container max-w-full w-[90%] mx-auto '>
+            <div className='container max-w-full  mx-auto '>
                 <div className="foter-content w-full p-[45px] bg-gradient-to-l from-[#004D57] to-[#017686] rounded-[15px] max-h-[752px] text-white">
                     <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8">
                         <div className="lg:col-span-7   p-10 flex flex-col justify-between">
@@ -29,7 +29,6 @@ export const Foters = () => {
 
                                     <h3 className="font-semibold text-lg text-white mt-8 mb-3">Ижтимоий тармоқ</h3>
                                     <div className="flex items-center gap-4 text-teal-200">
-                                        {/* Simple social icons */}
                                         <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8.5a4.5 4.5 0 019 0v.5h6" />
                                         </svg>
@@ -45,7 +44,7 @@ export const Foters = () => {
                             <div className="w-full bg-gradient-to-br from-[#004D57] to-[#017686] rounded-2xl p-10 shadow-2xl">
                                 <h2 className="text-3xl font-semibold mb-8">Анкетани тўлдиринг</h2>
 
-                                <form className="space-y-6" >
+                                <form  className="space-y-6" >
                                     <div>
                                         <label className="block text-sm text-teal-200 mb-2">Толик Исм</label>
                                         <input
@@ -65,12 +64,12 @@ export const Foters = () => {
                                         <div className="mt-4 space-y-3">
 
                                             <label className="flex items-start gap-3">
-                                                <input type="checkbox" className="w-5 h-5 accent-teal-800 rounded" />
+                                                <input  type="checkbox" className="w-5 h-5 accent-teal-800 rounded" />
                                                 <p>300.000 - 1 000 000 $</p>
                                             </label>
 
                                             <label className="flex items-start gap-3">
-                                                <input type="checkbox" className="w-5 h-5 accent-teal-800 rounded" />
+                                                <input type="checkbox" className="w-5 h-5   accent-teal-800 rounded" />
                                                 <p>1 000 000 - 10 000 000 $</p>
                                             </label>
 
